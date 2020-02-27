@@ -9,23 +9,31 @@ function my_Function() {
 function my_Function() {
     document.getElementById("Test").innerHTML=isNaN('007');
 }
-document.write(2E310);
-document.write(-3E310);
-document.write(10>5);
-document.write(10<5);
-console.log(3+5);
-document.write("20"+5);
+document.write(2E310 + " ");
+
+document.write(-3E310 + " ");
+
+document.write(10>5 + " ");
+
+document.write(10<5 + " ");
+
+console.log(3+5 + " ");
+
+document.write("20"+5 + " ");
+
 console.log(Boolean(null));
-document.write(20==20);
-document.write(10==5);
+
+document.write(20==20 + " ");
+
+document.write(10==5 + " ");
 
 X=50;
 Y=50;
-document.write(X===Y);
+document.write(X===Y + " ");
 
 X=10;
 Y=20
-document.write(X===Y);
+document.write(X===Y + " ");
 
 X=40;
 A=40;

@@ -15,8 +15,13 @@ function Input_Digit(digit) {
     const { Display_Value, Wait_Second_Operand} = Calculator;
     // we are checking to see if Wait_Second_Operand is true and set
     // Display_Value to the key that was clicked.
-    if(Wait_Second_Operand === true) {
-        Calculator.Display_Value ==='0'? digit: Display_Value + digit;
+    if (Wait_Second_Operand === true) {
+        Calculator.Display_Value = digit;
+        Calculator.Wait_Second_Operand =false;
+    } else {
+    //this overwrites Display_Value if the current value is 0
+    //otherwise it adds onto it
+     Calculator.Display_Value = Display_Value ==='0'? digit: Display_Value + digit;
     }
 }
 //this section handles decimal points
@@ -37,10 +42,10 @@ function Handle_Operator(Next_Operator) {
     // when an operator key is pressed, we convert the current number
     // displayed on the screen to a number and then store the result in
     // Calculator.First_Operand if it doesn't already exist
-    const Value_of_Input=parseFloat(Display_Value);
+    const Value_of_Input= parseFloat(Display_Value);
     // checks if an operator already exists and if Wait_Second_Operand is true,
     // then updates the operator and exits form the function
-    if (operator && Calculator.Wait_Second_Opernad) {
+    if (operator && Calculator.Wait_Second_Operand) {
         Calculator.operator = Next_Operator;
         return;
     }
@@ -51,7 +56,7 @@ function Handle_Operator(Next_Operator) {
       // if operator already exists, property lookup is performed for the operator
       // in the Perform_Calculation object and function that matches the
       // operator is executed
-      const result = Perform_Calculator[operator] (Value_Now, Value_of_Input);
+      const result = Perform_Calculation[operator] (Value_Now, Value_of_Input);
       
       Calculator.Display_Value = String(result);
       Calculator.First_Operand = result;
@@ -89,7 +94,12 @@ keys.addEventListener('click', (event) => {
     //that was clicked
     const { target } = event;
     //if the element that was clicked on is not a button, exit the function
-    if(!target.matches('button')) {
+    if (!target.matches('button')) {
+        return;
+    }
+    if (target.classList.contains('operator')) {
+        Handle_Operator(target.value);
+        Update_Display();
         return;
     }
 

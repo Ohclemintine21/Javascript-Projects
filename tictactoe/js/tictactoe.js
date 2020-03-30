@@ -9,7 +9,7 @@ function watch() {
 // this function will roll for random number twice, one for 
 // each player and determine which player won the roll.
 function rollForTurn() {
-    var xArray = {};
+    var xArray = [];
     var ranNum = '';
     var minimum = 1;
     var maximum = 11;
@@ -389,4 +389,6 @@ function checkWinCon1 (info,squareArray) {
                 var match0Avatar = info[i].charAt(1);
         }
     }
+   
+    
 }

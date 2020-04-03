@@ -11,24 +11,24 @@
                 <div id= 'container'>\
                     <div id= 'inner'>\
                         <h1>Basic jQuery</h1>\
-                        <p>Paragraph 1</p>\
-                        <p>Paragraph 2</p>\
-                        <p>Paragraph 3</p>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
                     </div>\
                 </div>\
             </body>"
         );
-    });
-</script>
-<script>
-        // Event setup using a convenience method
-        $( "p" ).click(function() {
-         console.log( "You clicked a paragraph!" );
+         // Event setup using a convenience method
+         $("#1").click(function() {
+         console.log("You clicked a paragraph!");
         });
-        // Instantaneously hide all paragraphs
-        $( "p" ).hide();
         // Instantaneously show all divs that have the hidden style class
         $( "div.hidden" ).show();
-
+        $("#2").css({"color":"red"});
+        $("#3").click(function() {
+            $('h1').hide();
+        });
+    });
+       
     </script>
 </html>

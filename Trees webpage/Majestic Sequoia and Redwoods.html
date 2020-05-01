@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Majestic Sequoia and Rewoods</title>
+		<link rel="stylesheet" href="./css/trees.css">
+	</head>
+	<body>
+		<!--NAV-->
+		<div>
+			<div>
+				<ul>
+					<a href="#home" id="link"><li>Home</li></a>
+					<a href="#Resources" id="link"><li>Resources</li></a>
+					<a href="#contact" id="link"><li>Contact</li></a>
+				</ul>
+			</div>
+		</div>
+		<!--END NAV-->
+		
+		<!--HOME-->
+		<div id="home">
+			<div>
+				<div>
+					<span>
+						<h1>Sequoia and Redwood Trees</h1>
+					</span>
+					<div>
+						<img src="./treeimages/thumb/canopy.png" alt="Cluster of Redwoods">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--END HOME-->
+		
+		<!-- Resources -->
+		<!--Sequoia Trees-->
+		<section>
+			<div id="Resources">
+				<h1>Sequoia Trees</h1>
+				<p>Sequoias are some of the largest and most fascinating trees in the world!Some can grow to be up to 316 feet tall and some live to be 3,000 years old!</p>
+				<div>
+					<img src="./treeimages/thumb/sequioa3.png" alt="General Sherman Sequoia">
+				</div>
+			</div>
+		</section>
+			<!--End Sequoia-->
+
+			<!--Resources-->
+			<!--Redwood Trees-->
+		<section>
+			<div id="Resources">
+				<h1>Redwood Trees</h1>
+				<p>Redwood trees are the tallest trees on Earth. Like the Sequoia tree, Redwood trees can live to be 3,000 years old and possibly even older than that.</p>
+				<div>
+					<img src="./treeimages/thumb/redwood4.png" alt="Redwood image">
+					<div>
+						<p><h1>Scale of Giant Trees</h1></p>
+						<img src="./treeimages/thumb/scaletreeimage.png" alt="Scale of tree height">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Redwood-->
+
+		<!--Video-->
+		<div>
+			<div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/MglBOaOnzqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+		<!--End Video-->
+		
+<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="./treeimages/thumb/redwood_3.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./treeimages/thumb/sequioa3.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./treeimages/thumb/redwood4.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+	</div>
+	<div class="column">
+	  <img src="./treeimages/thumb/canopy.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+	</div>
+	<div class="column">
+		<img src="./treeimages/thumb/Redwood_5.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+	  </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 5</div>
+		<img src="./treeimages/thumb/redwood_3.png" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 5</div>
+		<img src="./treeimages/thumb/sequioa3.png" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 5</div>
+		<img src="./treeimages/thumb/redwood4.png" style="width:100%">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 5</div>
+		<img src="./treeimages/thumb/canopy.png" style="width:100%">
+	  </div>
+
+	  <div class="mySlides">
+		<div class="numbertext">5 / 5</div>
+		<img src="./treeimages/thumb/Redwood_5.png" style="width:100%">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="demo" src="./treeimages/thumb/redwood_3.png" onclick="currentSlide(1)" alt="Redwoods">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./treeimages/thumb/sequioa3.png" onclick="currentSlide(2)" alt="Large Tree">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./treeimages/thumb/redwood4.png" onclick="currentSlide(3)" alt="Scale of Trees">
+	  </div>
+  
+	  <div class="column">
+		<img class="demo" src="./treeimages/thumb/canopy.png" onclick="currentSlide(4)" alt="Sequoia">
+	  </div>
+
+	  <div class="column">
+		<img class="demo" src="./treeimages/thumb/Redwood_5.png" onclick="currentSlide(5)" alt="Sequoia">
+	  </div>
+	</div>
+  </div>
+				
+				
+  <!-- Contact -->
+				<div>
+					<div>
+						<p><h1>Want more info on Giant Sequoias and Redwoods? Sign up here!</h1></p>
+						<div>
+							<form action="" method="get">
+							First name:<input type="text" name="First_Name">
+							<br>
+							Last name:<input type="text" name="Last_Name"><br>
+							Email:<input type="email" name="Email"><br>
+							Password:<input type="password" name="Password">
+							<br>
+							<input type="submit" value="Submit">
+						    </form>
+						</div>
+					</div>
+				</div>
+				<!--End Contact -->
+				<script src="./trees.js"></script>
+	</body>
+</html>
+
+
+			

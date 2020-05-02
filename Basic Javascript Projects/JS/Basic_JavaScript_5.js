@@ -57,3 +57,12 @@ function not_Function() {
 function not_Function() {
     document.getElementById("Not").innerHTML=!(25>10);
 }
+var count = 0;
+function myfunction()
+{
+    count++;
+    alert("Function called " + count);
+}
+
+myfunction();
+myfunction();
